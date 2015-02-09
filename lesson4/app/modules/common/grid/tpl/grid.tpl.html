@@ -1,0 +1,42 @@
+<div>
+
+	<table class="table">
+
+		<thead>
+
+		<tr>
+			<th>#</th>
+			<th><a href="" ng-click="sortField = 'type'; reverse=!reverse;">type</a></th>
+			<th><a href="" ng-click="sortField = 'area'; reverse=!reverse;">area</a></th>
+			<th><a href="" ng-click="sortField = 'capital'; reverse=!reverse;">capital</a></th>
+		</tr>
+
+		</thead>
+		<tbody>
+
+		<tr ng-repeat="
+			item in rows
+			 | orderBy:sortField:reverse
+			 | startFrom:currentPage*pageSize
+			 | limitTo:10
+			">
+			<td>{{item.id}}</td>
+			<td>{{item.type}}</td>
+			<td>{{item.area}}</td>
+			<td>{{item.capital}}</td>
+		</tr>
+
+		</tbody>
+	</table>
+
+	<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+		Previous
+	</button>
+
+	{{currentPage+1}} / {{numberOfPages()}}
+
+	<button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+		Next
+	</button>
+
+</div>

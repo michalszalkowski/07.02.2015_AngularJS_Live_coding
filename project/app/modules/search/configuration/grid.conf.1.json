@@ -1,0 +1,96 @@
+{
+    "componentTpl": "component.grid-4-8.part",
+    "filterConfig": {
+        "apiUrl": "./server/listA.json?type/{type}/searchedText/{searchedText}/status/{status}/dateStart/{dateStart}/endStart/{endStart}",
+        "apiUrlParsed": "",
+        "title": "Filter Title",
+        "filters": [
+            {
+                "label": "Type",
+                "modelName": "type",
+                "type": "select",
+                "values": [
+                    {
+                        "id": "0",
+                        "name": "Type 1"
+                    },
+                    {
+                        "id": "1",
+                        "name": "Type 2",
+                        "selected": true
+                    }
+                ]
+            },
+            {
+                "label": "Search",
+                "modelName": "searchedText",
+                "type": "text"
+            },
+            {
+                "label": "Date start",
+                "modelName": "dateStart",
+                "type": "date"
+            },
+            {
+                "label": "End start",
+                "modelName": "endStart",
+                "type": "date"
+            },
+            {
+                "label": "Status",
+                "modelName": "status",
+                "type": "checkbox",
+                "values": [
+                    {
+                        "id": "1",
+                        "name": "Status 1"
+                    },
+                    {
+                        "id": "2",
+                        "name": "Status 2"
+                    },
+                    {
+                        "id": "3",
+                        "name": "Status 3"
+                    }
+                ]
+            }
+        ],
+        "filterForm": {}
+    },
+    "gridConfig": {
+        "title": "Grid Title",
+        "headers": [
+            {
+                "key": "",
+                "name": "",
+                "cellRender": "checkbox"
+            },
+            {
+                "key": "id",
+                "name": "Id",
+                "cellRender": "default"
+            },
+            {
+                "key": "type",
+                "name": "Type",
+                "cellRender": "iconType"
+            },
+            {
+                "key": "area",
+                "name": "Area",
+                "cellRender": "default"
+            },
+            {
+                "key": "capital",
+                "name": "Capital",
+                "cellRender": "default"
+            }
+        ],
+        "defaultSortField": "id",
+        "messageErrorNoResult": "No data",
+        "readOnly": false,
+        "rowType": "default",
+        "pageSize": 10
+    }
+}

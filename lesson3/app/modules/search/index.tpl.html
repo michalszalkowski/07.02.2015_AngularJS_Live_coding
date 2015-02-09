@@ -1,0 +1,24 @@
+<h1>{{title}}</h1>
+
+<!--<pre>{{data | json}}</pre>-->
+
+<!--<li ng-repeat="item in data">{{item}}</li>-->
+
+<table class="table">
+	<thead>
+	<tr>
+		<th>#</th>
+		<th>type</th>
+		<th>area</th>
+		<th>capital</th>
+	</tr>
+	</thead>
+	<tbody>
+	<tr ng-repeat="item in data">
+		<th>{{item.id}}</th>
+		<td>{{item.type}}</td>
+		<td>{{item.area}}</td>
+		<td>{{item.capital}}</td>
+	</tr>
+	</tbody>
+</table>

@@ -1,0 +1,25 @@
+<section class="row">
+	<div class="col-xs-4">
+		<filter
+				data="collection"
+				configuration="configuration"
+				component-api="componentApi"
+				>
+		</filter>
+	</div>
+
+	<div class="col-xs-8">
+		<grid
+				data="collection"
+				configuration="configuration"
+				component-api="componentApi"
+				>
+		</grid>
+		<div ng-include="buttonTplPath"></div>
+	</div>
+
+	<div class="col-xs-12">
+		<pre>{{configuration | json}}</pre>
+	</div>
+
+</section>

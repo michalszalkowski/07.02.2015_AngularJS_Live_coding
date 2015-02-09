@@ -1,0 +1,25 @@
+{
+    "filterConfig": {
+        "apiUrl": "./server/listA.json"
+    },
+    "gridConfig": {
+        "title": "Grid Title 2",
+        "headers": [
+            {
+                "key": "id",
+                "name": "Id",
+                "cellRender": "default"
+            },
+            {
+                "key": "capital",
+                "name": "Capital",
+                "cellRender": "default"
+            }
+        ],
+        "defaultSortField": "id",
+        "messageErrorNoResult": "No data",
+        "readOnly": false,
+        "rowType": "default",
+        "pageSize": 10
+    }
+}

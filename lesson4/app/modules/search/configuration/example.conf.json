@@ -1,0 +1,32 @@
+{
+    "gridConfig": {
+        "title": "Grid Title",
+        "headers": [
+            {
+                "key": "id",
+                "name": "Id",
+                "cellRender": "default"
+            },
+            {
+                "key": "type",
+                "name": "Type",
+                "cellRender": "iconType"
+            },
+            {
+                "key": "area",
+                "name": "Area",
+                "cellRender": "default"
+            },
+            {
+                "key": "capital",
+                "name": "Capital",
+                "cellRender": "default"
+            }
+        ],
+        "defaultSortField": "id",
+        "messageErrorNoResult": "No data",
+        "readOnly": false,
+        "rowType": "default",
+        "pageSize": 10
+    }
+}

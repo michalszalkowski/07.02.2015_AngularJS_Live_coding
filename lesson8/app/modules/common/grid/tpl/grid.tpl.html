@@ -1,0 +1,42 @@
+<div>
+	<h1>{{configuration.gridConfig.title}}</h1>
+	<table class="table">
+
+		<thead>
+
+		<tr>
+			<th ng-repeat="header in configuration.gridConfig.headers">
+				<a href="" ng-click="sortBy(header.key, reverse=!reverse)">{{header.name}}</a>
+			</th>
+		</tr>
+
+		</thead>
+		<tbody>
+
+		<tr ng-repeat="
+			item in rows
+			 | orderBy:sortField:reverse
+			 | startFrom:currentPage*pageSize
+			 | limitTo:10
+			">
+
+			<td ng-repeat="header in configuration.gridConfig.headers">
+				{{item[header.key]}}
+			</td>
+
+		</tr>
+
+		</tbody>
+	</table>
+
+	<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+		Previous
+	</button>
+
+	{{currentPage+1}} / {{numberOfPages()}}
+
+	<button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+		Next
+	</button>
+
+</div>

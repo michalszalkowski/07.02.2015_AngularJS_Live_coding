@@ -1,0 +1,10 @@
+bower install angular
+bower install bootstrap
+bower install angular-sanitize
+bower install angular-mocks
+bower install angular-route
+bower install angular-bootstrap
+
+npm install karma
+npm install karma-phantomjs-launcher
+npm install karma-jasmine

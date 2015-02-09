@@ -1,0 +1,6 @@
+<span ng-controller="checkBoxCtrl">
+<input type="checkbox"
+       ng-checked="isCheck(configuration.chosenRow, row)"
+       ng-click="(configuration.chosenRow == row) ? configuration.chosenRow = null : configuration.chosenRow = row"
+		/>
+</span>

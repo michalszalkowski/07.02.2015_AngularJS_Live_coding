@@ -1,0 +1,55 @@
+<div class="panel panel-default">
+
+	<div class="panel-heading">{{configuration.gridConfig.title}}</div>
+
+	<div class="panel-body">
+
+		<table class="table table-bordered" ng-hide="rows.length === 0">
+			<thead>
+
+				<tr>
+					<th ng-repeat="header in headers">
+
+						<a ng-hide="configuration.gridConfig.readOnly" href="" ng-click="sortBy(header.key, sortReverse=!sortReverse);">
+							{{header.name}}
+						</a>
+
+						<span ng-show="configuration.gridConfig.readOnly">
+							{{header.name}}
+						</span>
+
+					</th>
+				</tr>
+
+				<tr>
+					<th ng-repeat="header in headers">
+						<input class="form-control" ng-model="queryFilter.value[header.key]" type="text"/>
+					</th>
+				</tr>
+
+			</thead>
+
+			<tbody>
+
+				<tr
+						ng-repeat="row in rows
+						| orderBy:sortField:sortReverse
+						| filter:queryFilter.value
+						| startFrom:(currentPage-1)*pageSize
+						| limitTo:pageSize
+						"
+						ng-include="rowTpl()"
+						>
+				</tr>
+
+			</tbody>
+		</table>
+
+		<span ng-hide="rows.length === 0" ng-include="'app/modules/common/grid/tpl/pagination.html'"></span>
+
+		<div ng-hide="rows.length != 0" class="alert alert-danger" role="alert">
+			{{configuration.gridConfig.messageErrorNoResult}}
+		</div>
+
+	</div>
+</div>

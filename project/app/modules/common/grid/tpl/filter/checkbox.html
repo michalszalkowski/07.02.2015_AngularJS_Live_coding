@@ -1,0 +1,11 @@
+<div class="checkbox" ng-repeat="val in filter.values">
+	<label ng-init="filterForm[filter.modelName][val.id] = val.selected">
+		<input
+				type="checkbox"
+				ng-model="filterForm[filter.modelName][val.id]"
+				ng-checked="val.selected"
+				ng-change="runValidation()"
+				/>
+		{{val.name}}
+	</label>
+</div>

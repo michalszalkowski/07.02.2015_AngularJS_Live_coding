@@ -1,0 +1,9 @@
+<select class="form-control" ng-model="filterForm[filter.modelName]" >
+	<option
+			ng-repeat="val in filter.values"
+			ng-init="val.selected ? filterForm[filter.modelName] = val.id : ''"
+			value="{{val.id}}"
+			ng-selected="val.selected"
+			>{{val.name}}
+	</option>
+</select>

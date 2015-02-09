@@ -1,0 +1,23 @@
+<section>
+
+	<div class="panel panel-default">
+
+		<div class="panel-heading">{{configuration.filterConfig.title}}</div>
+
+		<div class="panel-body">
+			<table class="table table-bordered">
+
+				<div ng-repeat="filter in configuration.filterConfig.filters" class="form-group">
+					<label>{{filter.label}}</label>
+					<span ng-show="filter.type =='text'" ng-include="'app/modules/common/grid/tpl/filter/text.html'"></span>
+					<span ng-show="filter.type =='date'" ng-include="'app/modules/common/grid/tpl/filter/date.html'"></span>
+					<span ng-show="filter.type =='select'" ng-include="'app/modules/common/grid/tpl/filter/select.html'"></span>
+					<span ng-show="filter.type =='checkbox'" ng-include="'app/modules/common/grid/tpl/filter/checkbox.html'"></span>
+				</div>
+
+				<span ng-click="doFilter()" class="btn btn-success">Filter!</span>
+			</table>
+		</div>
+	</div>
+
+</section>
