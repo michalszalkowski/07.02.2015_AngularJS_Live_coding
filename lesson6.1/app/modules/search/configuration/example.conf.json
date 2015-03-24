@@ -1,0 +1,28 @@
+{
+    "gridConfig": {
+        "title": "Grid Title 1",
+        "headers": [
+            {
+                "key": "ID",
+                "name": "Id",
+                "cellRender": "default"
+            },
+            {
+                "key": "CITY.NAME",
+                "name": "Name",
+                "cellRender": "iconType"
+            },
+            {
+                "key": "CITY.TYPE",
+                "name": "Name",
+                "cellRender": "iconType"
+            },
+            {
+                "key": "PERSON.DETAILS.CUSTOM",
+                "name": "Person",
+                "cellRender": "iconType"
+            }
+        ],
+        "messageErrorNoResult": "No data"
+    }
+}

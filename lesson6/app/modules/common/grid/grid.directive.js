@@ -1,4 +1,4 @@
-angular.module('grid', [])
+ angular.module('grid', [])
 
 	.directive('grid', function () {
 		return {

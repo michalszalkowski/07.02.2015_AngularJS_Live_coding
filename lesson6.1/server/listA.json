@@ -1,0 +1,26 @@
+[
+    {
+        "ID": 1,
+        "CITY": {
+            "NAME": "City 1",
+            "TYPE": "1"
+        },
+        "PERSON": {"DETAILS": {"CUSTOM": "Lo1"}}
+    },
+    {
+        "ID": 2,
+        "CITY": {
+            "NAME": "City 2",
+            "TYPE": "2"
+        },
+        "PERSON": {"DETAILS": {"CUSTOM": "Lo2"}}
+    },
+    {
+        "ID": 3,
+        "CITY": {
+            "NAME": "City 3",
+            "TYPE": "3"
+        },
+        "PERSON": {"DETAILS": {"CUSTOM": "Lo3"}}
+    }
+]

@@ -1,0 +1,26 @@
+<div>
+	<h1>{{configuration.gridConfig.title}}</h1>
+	<table class="table">
+
+		<thead>
+
+		<tr>
+			<th ng-repeat="header in configuration.gridConfig.headers">
+				{{header.name}}
+			</th>
+		</tr>
+
+		</thead>
+		<tbody>
+
+		<tr ng-repeat="item in rows">
+			<td ng-repeat="header in configuration.gridConfig.headers">
+				{{getCell(item,header.key)}}
+			</td>
+		</tr>
+
+		</tbody>
+	</table>
+
+
+</div>
